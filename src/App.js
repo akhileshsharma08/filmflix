@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Home from './components/Home';
+import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom'; 
+import Trending from './components/Trending'
+import Popular from './components/Popular'
+import Upcoming from './components/Upcoming'
+import Shows from './components/Shows'
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Review from './components/Review';
+import Error from './components/Error';
+import MoviesList from './components/MoviesList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+  
+   <Router>
+   <Navbar/>
+    <Routes>
+      
+      <Route index element={<Home/>}></Route>
+      <Route path='trending' element={<Trending/>}></Route>
+      <Route path='popular' element={<Popular/>}></Route>
+      <Route path='shows' element={<Shows/>}></Route>
+      <Route path='upcoming' element={<Upcoming/>}></Route>
+      <Route path='movie/:id' element={<Review/>}></Route>
+      <Route path="movies/:type" element={<MoviesList />}></Route>
+      <Route path='/*' element={<Error/>}></Route>
+
+
+
+    </Routes>
+    <Footer/>
+   </Router>
+
     </div>
   );
 }
