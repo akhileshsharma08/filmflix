@@ -29,12 +29,11 @@ const Home = () => {
 
   const [popularMovies, setPopularMovies] = useState([])
 
-  // setIsLoading(true)
   axios.get('https://api.themoviedb.org/3/movie/popular?api_key=4985a084b07afd132b4316ba30d8a6fd')
     .then(resp => resp.data
     ).then((data) => {
       setPopularMovies(data.results)
-      // setIsLoading(false)
+      setIsLoading(false)
     })
 
     .catch(err => console.log(err, "err in fetching"))
@@ -64,7 +63,8 @@ const Home = () => {
           autoPlay={true}
           transitionTime={3}
           infiniteLoop={false}
-          showStatus={false}>
+          showStatus={false}
+          >
          {popularMovies.map((movie)=>{
           return(
             <>
@@ -77,9 +77,7 @@ const Home = () => {
               <h1 className='posterImage__runtime '>Released: {movie?movie.release_date:""} </h1>
             <span className='  flex flex-wrap items-center text-xl'>Rating: {movie.vote_average}&nbsp;<AiFillStar className='text-yellow-400'/></span>  
             
-             {/* <div className="posterImage__description">
-             {movie?movie.overview:""}
-             </div> */}
+             
             </div>
             </Link>
             </>
@@ -87,7 +85,6 @@ const Home = () => {
          })}
         </Carousel>
       <MoviesList/>
-        {/* <Trending/> */}
       
       </div>
  } 
