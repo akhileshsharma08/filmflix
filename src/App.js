@@ -27,8 +27,8 @@ function App() {
       <Route path='upcoming' element={<Upcoming/>}></Route>
       <Route path='movie/:id' element={<Review/>}></Route>
       <Route path='trending/movie/:id' element={<Review/>}></Route>
-      <Route path='upcoming/:id' element={<Review/>}></Route>
-      <Route path='shows/:id' element={<Review/>}></Route>
+      <Route path='upcoming/movie/:id' element={<Review/>}></Route>
+      <Route path='shows/movie/:id' element={<Review/>}></Route>
       <Route path="popular/:type" element={<MoviesList />}></Route>
       <Route path='/*' element={<Error/>}></Route>
 

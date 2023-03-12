@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import Trending from './Trending';
+// import Trending from './Trending';
 import { Link } from 'react-router-dom';
-import Review from './Review';
+// import Review from './Review';
 import './Home.css'
 import { AiFillStar } from 'react-icons/ai';
 import 'react-loading-skeleton/dist/skeleton.css'
