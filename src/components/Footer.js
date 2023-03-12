@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {AiFillGithub,AiFillInstagram,AiFillFacebook,AiOutlineMail} from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
       <Link to='/' className="flex title-font font-medium items-center md:justify-start justify-center text-white">
        
-        <span className="ml-3 text-xl"><img src='/img/logo.png' alt=' filmflix logo ' className='h-10 w-15'/></span>
+        <span className="ml-3 text-xl"><img src='/img/logo.png' alt='filmflix logo ' className='h-10 w-15'/></span>
 
       </Link>
       <p className="mt-2 text-sm text-white">Movie Website Made by TMDB API.</p>
@@ -28,8 +29,14 @@ const Footer = () => {
      
   </div>
   <div className="bg-black">
-    <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-white text-sm text-center sm:text-left">© 20223 Akhilesh Sharma</p>
+    <div className="container mx-auto py-4 px-5 ">
+      <h4 className="text-white text-sm text-center sm:text-left mb-2">© 20223 Akhilesh Sharma</h4><br />
+      <div className="iconsbox flex flex-wrap justify-center items-center mt-1">
+        <h3 className='text-xl'><Link to={'#'}><AiFillInstagram className='text-lg'/></Link></h3>
+        <h3 className='text-xl'><Link to={'#'}><AiFillFacebook className='text-lg'/></Link></h3>
+        <h3 className='text-xl'><Link to={'#'}><AiFillGithub className='text-lg'/></Link></h3>
+        <h3 className='text-xl'><Link to={'#'}><AiOutlineMail className='text-lg'/></Link></h3>
+      </div>
       
     </div>
   </div>
