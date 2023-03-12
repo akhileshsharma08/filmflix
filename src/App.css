@@ -11,6 +11,21 @@ html{
 color: rgb(236, 236, 32);
 }
 
+.footertxt{
+  margin-bottom: 0px !important;
+  padding-bottom: 0 !important;
+font-size: 1.2rem !important;
+}
+.footericons{
+  font-size: 2rem !important;
+  margin: 2px 2px;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.footericons:hover{
+  color: rgb(204, 67, 67);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

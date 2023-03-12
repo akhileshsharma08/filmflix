@@ -30,12 +30,12 @@ const Footer = () => {
   </div>
   <div className="bg-black">
     <div className="container mx-auto py-4 px-5 ">
-      <h4 className="text-white text-sm text-center sm:text-left mb-2">© 20223 Akhilesh Sharma</h4><br />
+      <h4 className="text-white footertxt text-sm text-center sm:text-left mb-2">© 20223 Akhilesh Sharma</h4><br />
       <div className="iconsbox flex flex-wrap justify-center items-center mt-1">
-        <h3 className='text-xl'><Link to={'#'}><AiFillInstagram className='text-lg'/></Link></h3>
-        <h3 className='text-xl'><Link to={'#'}><AiFillFacebook className='text-lg'/></Link></h3>
-        <h3 className='text-xl'><Link to={'#'}><AiFillGithub className='text-lg'/></Link></h3>
-        <h3 className='text-xl'><Link to={'#'}><AiOutlineMail className='text-lg'/></Link></h3>
+        <h3 className=' footericons'><Link to={'#'}><AiFillInstagram className=''/></Link></h3>
+        <h3 className=' footericons'><Link to={'#'}><AiFillFacebook className=''/></Link></h3>
+        <h3 className=' footericons'><Link to={'#'}><AiFillGithub className=''/></Link></h3>
+        <h3 className=' footericons'><Link to={'#'}><AiOutlineMail className=''/></Link></h3>
       </div>
       
     </div>
