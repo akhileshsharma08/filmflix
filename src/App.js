@@ -29,6 +29,7 @@ function App() {
       <Route path='trending/movie/:id' element={<Review/>}></Route>
       <Route path='upcoming/movie/:id' element={<Review/>}></Route>
       <Route path='shows/movie/:id' element={<Review/>}></Route>
+      <Route path='popular/movie/:id' element={<Review/>}></Route>
       <Route path="popular/:type" element={<MoviesList />}></Route>
       <Route path='/*' element={<Error/>}></Route>
 
