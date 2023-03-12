@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Review from './components/Review';
 import Error from './components/Error';
 import MoviesList from './components/MoviesList';
+import ShowReview from './components/ShowReview';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
       <Route path='movie/:id' element={<Review/>}></Route>
       <Route path='trending/movie/:id' element={<Review/>}></Route>
       <Route path='upcoming/movie/:id' element={<Review/>}></Route>
-      <Route path='shows/movie/:id' element={<Review/>}></Route>
+      <Route path='shows/:id' element={<ShowReview/>}></Route>
       <Route path='popular/movie/:id' element={<Review/>}></Route>
       <Route path="popular/:type" element={<MoviesList />}></Route>
       <Route path='/*' element={<Error/>}></Route>

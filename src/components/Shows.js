@@ -16,11 +16,11 @@ const Shows = () => {
         .then(resp => resp.data
         ).then((data) => {
           setTrendingMovies(data.results)
-          // setIsLoading(false)
+          setIsLoading(false)
         })
 
         .catch(err => console.log(err, "err in fetching"))
-    }, 1500)
+    }, 2000)
   }, [])
 
 
@@ -49,7 +49,7 @@ const Shows = () => {
                 return (
                   <>
                     <div className="card shadow-lg p-2 lg:w-1/5 transition ease-in-out   hover:-translate-y-1 hover:scale-105 duration-500 " key={data.id}>
-                      <Link to={`movie/${data.id}`} key={data.id}>
+                      <Link to={`/shows/${data.id}`} key={data.id}>
                         <div className="h-full bg-gray-900 bg-opacity-75 px-4 pt-6 pb-10 rounded-lg overflow-hidden text-center relative">
                           <img src={`https://image.tmdb.org/t/p/original/${data.poster_path}`} className='h-70 w-50 justify-center rounded-lg ' alt='movie poster' />
                           <h1 className="tracking-widest text-s title-font font-medium text-gray-400 mb-1">{data.original_title}</h1>
